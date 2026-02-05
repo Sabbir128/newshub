@@ -22,23 +22,23 @@
     },
     {
       "id": 2,
-      "title": "Global Markets Rally on Economic Data",
       "slug": "global-markets-rally",
+      "title": "Global Markets Rally on Economic Data",
       "excerpt": "Stock markets around the world surge as new economic indicators show positive growth trends.",
       "content": "Investors welcomed the latest economic data with open arms today as major stock indices across the globe posted significant gains. The rally was driven by better-than-expected employment figures and manufacturing data.\n\n# Market Performance\n\nThe S&P 500 climbed 2.3% in early trading, while the Nasdaq Composite rose 2.8%. European markets also saw strong gains, with the FTSE 100 up 1.9% and Germany's DAX increasing by 2.1%.\n\n> This is the kind of broad-based rally that suggests genuine confidence in the economic outlook.\n\n# Key Drivers\n\nSeveral factors contributed to today's market optimism:\n\n## Employment Data\n\nThe latest jobs report showed unemployment falling to its lowest level in two years, with wage growth remaining steady.\n\n## Manufacturing Recovery\n\nManufacturing PMI data indicated expansion for the third consecutive month, suggesting the industrial sector is finding its footing.\n\n## Central Bank Signals\n\nComments from central bank officials hinted at a more accommodative monetary policy stance going forward.\n\n# Looking Ahead\n\nWhile today's rally is encouraging, analysts caution that markets remain sensitive to geopolitical developments and inflation data.",
-      "category": "business",
-      "author": "Michael Chen",
-      "authorImage": "https://i.pravatar.cc/150?u=michael",
-      "date": "2025-01-14",
       "image": "https://images.unsplash.com/photo-1611974765270-ca1258634369?w=800",
+      "category": "business",
+      "author": "Sabbir Hossen",
+      "authorImage": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkPM0yTTyh9GSIil1eagqfYcMM5j3SBLWyRfG0Q5Y8wjbbUL3ZDFt52qVFItQ60zjzL1mdu2_BIKNEQHdqyMP0wpEYblQgVN1HOSOovKgPkwsWUsLtRiVhXrshsXQhVt7qjQovQ_i5TnEB3cYa7ZE8aO9JdBPVfGgRZkPjhcLKy2yMEWf-3i7UsLWRok_6/s240/FB_IMG_1695528307670.jpg",
+      "date": "2025-01-14",
       "featured": true,
-      "views": 8900,
       "tags": [
         "markets",
         "stocks",
         "economy",
         "finance"
-      ]
+      ],
+      "views": 8900
     },
     {
       "id": 3,
@@ -241,5 +241,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-05T14:52:59.002Z"
+  "lastUpdated": "2026-02-05T14:53:22.213Z"
 }
