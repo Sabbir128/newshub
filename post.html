@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsHub - Article</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index.html" class="logo">
+                    <span class="logo-icon">📰</span>
+                    <span class="logo-text">NewsHub</span>
+                </a>
+                
+                <nav class="main-nav">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="category.html?cat=technology" class="nav-link">Technology</a>
+                    <a href="category.html?cat=business" class="nav-link">Business</a>
+                    <a href="category.html?cat=sports" class="nav-link">Sports</a>
+                    <a href="category.html?cat=entertainment" class="nav-link">Entertainment</a>
+                </nav>
+                
+                <div class="header-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                        <span class="theme-icon light">☀️</span>
+                        <span class="theme-icon dark">🌙</span>
+                    </button>
+                    <button class="search-toggle" id="searchToggle" aria-label="Search">
+                        🔍
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-bar" id="searchBar">
+            <div class="container">
+                <input type="text" id="searchInput" placeholder="Search news..." autocomplete="off">
+                <button class="search-close" id="searchClose">✕</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="category.html?cat=technology" class="mobile-nav-link">Technology</a>
+            <a href="category.html?cat=business" class="mobile-nav-link">Business</a>
+            <a href="category.html?cat=sports" class="mobile-nav-link">Sports</a>
+            <a href="category.html?cat=entertainment" class="mobile-nav-link">Entertainment</a>
+        </nav>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Article Header -->
+        <section class="article-header">
+            <div class="container">
+                <div class="article-meta" id="articleMeta">
+                    <!-- Article metadata will be loaded here -->
+                </div>
+                <h1 class="article-title" id="articleTitle">Loading...</h1>
+                <div class="article-author" id="articleAuthor">
+                    <!-- Author info will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Image -->
+        <section class="article-image-section">
+            <div class="container">
+                <div class="article-featured-image" id="articleFeaturedImage">
+                    <!-- Featured image will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Article Content -->
+        <section class="article-content-section">
+            <div class="container">
+                <div class="article-layout">
+                    <article class="article-body" id="articleBody">
+                        <!-- Article content will be loaded here -->
+                    </article>
+                    
+                    <aside class="article-sidebar">
+                        <div class="share-widget">
+                            <h3>Share This Article</h3>
+                            <div class="share-buttons">
+                                <button class="share-btn facebook" onclick="shareArticle('facebook')">
+                                    <span>📘</span> Facebook
+                                </button>
+                                <button class="share-btn twitter" onclick="shareArticle('twitter')">
+                                    <span>🐦</span> Twitter
+                                </button>
+                                <button class="share-btn linkedin" onclick="shareArticle('linkedin')">
+                                    <span>💼</span> LinkedIn
+                                </button>
+                                <button class="share-btn copy" onclick="copyLink()">
+                                    <span>📋</span> Copy Link
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="related-posts" id="relatedPosts">
+                            <h3>Related Articles</h3>
+                            <!-- Related posts will be loaded here -->
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comments Section -->
+        <section class="comments-section">
+            <div class="container">
+                <h2 class="section-title">Comments</h2>
+                <div class="comments-info">
+                    <p>💬 Comments are disabled on static sites. Connect with us on social media!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">📰</span>
+                        <span class="logo-text">NewsHub</span>
+                    </a>
+                    <p class="footer-description">Your trusted source for the latest news and updates from around the world.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Categories</h4>
+                        <ul id="footerCategories">
+                            <!-- Categories will be loaded here -->
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Quick Links</h4>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="admin/index.html">Admin</a></li>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Follow Us</h4>
+                        <div class="social-links">
+                            <a href="#" aria-label="Facebook">📘</a>
+                            <a href="#" aria-label="Twitter">🐦</a>
+                            <a href="#" aria-label="Instagram">📷</a>
+                            <a href="#" aria-label="LinkedIn">💼</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="currentYear"></span> NewsHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/fetch.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/post.js"></script>
+</body>
+</html>
