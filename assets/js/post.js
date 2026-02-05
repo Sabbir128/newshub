@@ -10,39 +10,33 @@ const PostPage = {
             const urlParams = new URLSearchParams(window.location.search);
             const slug = urlParams.get('slug');
             
-            console.log('Slug:', slug); // Debug
+            console.log('Loading post with slug:', slug);
             
             if (!slug) {
-                this.showError('No article slug provided');
+                this.showError('No article specified');
                 return;
             }
             
-            // Wait for DataService to be ready
-            if (typeof DataService === 'undefined') {
-                console.error('DataService not loaded');
-                this.showError('Service not available');
-                return;
-            }
+            // Load posts using YOUR fetch.js method
+            const posts = await DataService.loadPosts();
+            console.log('Total posts loaded:', posts.length);
             
-            // Load post data
-            const posts = await DataService.getData('posts');
-            console.log('Posts loaded:', posts ? posts.length : 0); // Debug
-            
+            // Find the post
             this.post = posts.find(p => p.slug === slug);
-            console.log('Found post:', this.post); // Debug
+            console.log('Found post:', this.post);
             
             if (!this.post) {
                 this.showError('Article not found: ' + slug);
                 return;
             }
             
-            // Render everything
+            // Render the post
             this.renderArticle();
             this.renderRelatedPosts();
             this.updatePageTitle();
             
         } catch (error) {
-            console.error('Init error:', error);
+            console.error('Error loading post:', error);
             this.showError('Failed to load article');
         }
     },
@@ -51,44 +45,36 @@ const PostPage = {
         const post = this.post;
         if (!post) return;
         
-        console.log('Rendering post:', post.title); // Debug
+        // Update title
+        const titleEl = document.getElementById('articleTitle');
+        if (titleEl) titleEl.textContent = post.title || 'Untitled';
         
-        // Title
-        const articleTitle = document.getElementById('articleTitle');
-        if (articleTitle) {
-            articleTitle.textContent = post.title || 'Untitled';
-        }
-        
-        // Meta (Category, Date, Views)
-        const articleMeta = document.getElementById('articleMeta');
-        if (articleMeta) {
-            const category = post.category || 'Uncategorized';
-            const date = this.formatDate(post.date);
-            const views = post.views || 0;
-            
-            articleMeta.innerHTML = `
-                <span class="article-category">${this.capitalize(category)}</span>
-                <span class="article-date">${date}</span>
+        // Update meta (category, date, views)
+        const metaEl = document.getElementById('articleMeta');
+        if (metaEl) {
+            metaEl.innerHTML = `
+                <span class="article-category">${this.capitalize(post.category || 'uncategorized')}</span>
+                <span class="article-date">${this.formatDate(post.date)}</span>
                 <span class="article-views">
                     <span class="views-icon">👁️</span>
                     <span id="postViewsDisplay" 
                           data-slug="${post.slug}" 
-                          data-manual-views="${views}">0</span>
+                          data-manual-views="${post.views || 0}">0</span>
                     <span class="views-label">views</span>
                 </span>
             `;
             
-            // Initialize view counter
+            // Initialize view counter if available
             if (typeof ViewCounter !== 'undefined') {
-                ViewCounter.init(post.slug, views);
+                ViewCounter.init(post.slug, post.views || 0);
             }
         }
         
-        // Author
-        const articleAuthor = document.getElementById('articleAuthor');
-        if (articleAuthor) {
-            articleAuthor.innerHTML = `
-                <img src="${post.authorImage || 'assets/images/default-avatar.png'}" 
+        // Update author
+        const authorEl = document.getElementById('articleAuthor');
+        if (authorEl) {
+            authorEl.innerHTML = `
+                <img src="${post.authorImage || 'https://i.pravatar.cc/150'}" 
                      alt="${post.author || 'Unknown'}" 
                      class="article-author-image">
                 <div class="article-author-info">
@@ -98,19 +84,19 @@ const PostPage = {
             `;
         }
         
-        // Featured Image
-        const articleFeaturedImage = document.getElementById('articleFeaturedImage');
-        if (articleFeaturedImage) {
-            articleFeaturedImage.innerHTML = `
-                <img src="${post.image || 'assets/images/default.jpg'}" 
+        // Update featured image
+        const imageEl = document.getElementById('articleFeaturedImage');
+        if (imageEl) {
+            imageEl.innerHTML = `
+                <img src="${post.image || 'https://via.placeholder.com/800x400'}" 
                      alt="${post.title}">
             `;
         }
         
-        // Content
-        const articleBody = document.getElementById('articleBody');
-        if (articleBody) {
-            articleBody.innerHTML = this.formatContent(post.content);
+        // Update content
+        const bodyEl = document.getElementById('articleBody');
+        if (bodyEl) {
+            bodyEl.innerHTML = this.formatContent(post.content);
         }
     },
     
@@ -121,13 +107,13 @@ const PostPage = {
         if (!container) return;
         
         try {
-            const posts = await DataService.getData('posts');
+            const posts = await DataService.loadPosts();
             const related = posts
                 .filter(p => p.category === this.post.category && p.slug !== this.post.slug)
                 .slice(0, 4);
             
             if (related.length === 0) {
-                container.style.display = 'none';
+                container.innerHTML = '<h3>Related Articles</h3><p>No related articles found.</p>';
                 return;
             }
             
@@ -143,7 +129,7 @@ const PostPage = {
                 `).join('')}
             `;
         } catch (error) {
-            console.error('Related posts error:', error);
+            console.error('Error loading related posts:', error);
         }
     },
     
@@ -175,14 +161,12 @@ const PostPage = {
     },
     
     showError(message) {
-        console.error('Error:', message);
+        const titleEl = document.getElementById('articleTitle');
+        const bodyEl = document.getElementById('articleBody');
         
-        const title = document.getElementById('articleTitle');
-        const body = document.getElementById('articleBody');
-        
-        if (title) title.textContent = 'Error';
-        if (body) {
-            body.innerHTML = `
+        if (titleEl) titleEl.textContent = 'Error';
+        if (bodyEl) {
+            bodyEl.innerHTML = `
                 <div class="error-message" style="text-align: center; padding: 40px;">
                     <h2>⚠️ ${message}</h2>
                     <p>The article could not be loaded.</p>
@@ -239,8 +223,7 @@ function copyLink() {
     });
 }
 
-// Initialize
+// Initialize when page loads
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('PostPage initializing...'); // Debug
     PostPage.init();
 });
