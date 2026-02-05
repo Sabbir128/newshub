@@ -1,6 +1,26 @@
 {
   "posts": [
     {
+      "id": 1770306443567,
+      "slug": "bnp-swami",
+      "title": "Bnp Swami",
+      "excerpt": "Lorem Bro",
+      "content": "Sjdjhdhdbdbbbfnnfouf fndjdhhdhhdh",
+      "image": "https://www.youtube.com/embed/IdpMxdjByf8",
+      "category": "science",
+      "author": "Sabbir Hossen",
+      "authorImage": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkPM0yTTyh9GSIil1eagqfYcMM5j3SBLWyRfG0Q5Y8wjbbUL3ZDFt52qVFItQ60zjzL1mdu2_BIKNEQHdqyMP0wpEYblQgVN1HOSOovKgPkwsWUsLtRiVhXrshsXQhVt7qjQovQ_i5TnEB3cYa7ZE8aO9JdBPVfGgRZkPjhcLKy2yMEWf-3i7UsLWRok_6/s240/FB_IMG_1695528307670.jpg",
+      "date": "2026-02-05",
+      "featured": false,
+      "tags": [
+        "AI",
+        "technology",
+        "future",
+        "innovation"
+      ],
+      "views": 0
+    },
+    {
       "id": 1,
       "slug": "future-of-ai-2025",
       "title": "The Future of AI: What to Expect in 2025",
@@ -241,5 +261,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-05T14:55:06.128Z"
+  "lastUpdated": "2026-02-05T15:47:24.207Z"
 }
