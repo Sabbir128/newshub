@@ -87,17 +87,33 @@ const PostPage = {
         }
     },
     
-    async renderRelatedPosts() {
-        if (!this.post) return;
+    // post.js এর renderArticle ফাংশনে যোগ করুন:
+
+async function renderArticle() {
+    const { post } = this;
+    
+    // ... existing code ...
+    
+    // Set view counter data
+    const viewsDisplay = document.getElementById('postViewsDisplay');
+    if (viewsDisplay) {
+        viewsDisplay.dataset.slug = post.slug;
+        viewsDisplay.dataset.manualViews = post.views || 0;
         
-        const relatedPostsContainer = document.getElementById('relatedPosts');
-        if (!relatedPostsContainer) return;
-        
-        const relatedPosts = await DataService.getRelatedPosts(
-            this.post.slug, 
-            this.post.category, 
-            4
-        );
+        // Load views.js if not already loaded
+        if (!window.ViewCounter) {
+            const script = document.createElement('script');
+            script.src = 'assets/js/views.js';
+            script.onload = () => {
+                ViewCounter.init(post.slug, post.views || 0);
+            };
+            document.head.appendChild(script);
+        }
+    }
+    
+    // ... rest of the code ...
+}
+
         
         if (relatedPosts.length === 0) {
             relatedPostsContainer.style.display = 'none';
