@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login - NewsHub</title>
+    <link rel="stylesheet" href="admin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-header">
+                <div class="logo">
+                    <span class="logo-icon">📰</span>
+                    <span class="logo-text">NewsHub</span>
+                </div>
+                <h1>Admin Panel</h1>
+                <p>Sign in to manage your content</p>
+            </div>
+            
+            <form class="login-form" id="loginForm">
+                <div class="form-group">
+                    <label for="githubToken">GitHub Personal Access Token</label>
+                    <input 
+                        type="password" 
+                        id="githubToken" 
+                        placeholder="ghp_xxxxxxxxxxxxxxxxxxxx" 
+                        required
+                        autocomplete="off"
+                    >
+                    <span class="help-text">
+                        <a href="https://github.com/settings/tokens" target="_blank" rel="noopener">
+                            Create a token →
+                        </a>
+                        (needs 'repo' scope)
+                    </span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="repoOwner">Repository Owner</label>
+                    <input 
+                        type="text" 
+                        id="repoOwner" 
+                        placeholder="yourusername" 
+                        required
+                    >
+                </div>
+                
+                <div class="form-group">
+                    <label for="repoName">Repository Name</label>
+                    <input 
+                        type="text" 
+                        id="repoName" 
+                        placeholder="news-site" 
+                        required
+                    >
+                </div>
+                
+                <div class="form-group remember-me">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="rememberMe" checked>
+                        <span class="checkmark"></span>
+                        Remember me
+                    </label>
+                </div>
+                
+                <button type="submit" class="btn btn-primary btn-block">
+                    <span class="btn-text">Sign In</span>
+                    <span class="btn-loader" style="display: none;">
+                        <span class="spinner"></span>
+                    </span>
+                </button>
+            </form>
+            
+            <div class="login-info">
+                <div class="info-box">
+                    <h4>🔐 How to Get Your Token</h4>
+                    <ol>
+                        <li>Go to <a href="https://github.com/settings/tokens" target="_blank">GitHub Settings → Developer settings → Personal access tokens</a></li>
+                        <li>Click "Generate new token (classic)"</li>
+                        <li>Give it a name like "NewsHub Admin"</li>
+                        <li>Select the <code>repo</code> scope</li>
+                        <li>Click "Generate token"</li>
+                        <li>Copy and paste the token here</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="login-footer">
+                <a href="../index.html">← Back to Website</a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Toast Notifications -->
+    <div class="toast-container" id="toastContainer"></div>
+    
+    <script src="admin.js"></script>
+    <script>
+        // Login page specific logic
+        document.getElementById('loginForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            
+            const token = document.getElementById('githubToken').value.trim();
+            const owner = document.getElementById('repoOwner').value.trim();
+            const repo = document.getElementById('repoName').value.trim();
+            const rememberMe = document.getElementById('rememberMe').checked;
+            
+            if (!token || !owner || !repo) {
+                AdminUI.showToast('Please fill in all fields', 'error');
+                return;
+            }
+            
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const btnText = submitBtn.querySelector('.btn-text');
+            const btnLoader = submitBtn.querySelector('.btn-loader');
+            
+            btnText.style.display = 'none';
+            btnLoader.style.display = 'block';
+            submitBtn.disabled = true;
+            
+            try {
+                // Test the credentials
+                const github = new GitHubAPI(token, owner, repo);
+                const isValid = await github.testConnection();
+                
+                if (isValid) {
+                    // Store credentials
+                    const authData = { token, owner, repo };
+                    if (rememberMe) {
+                        localStorage.setItem('newshub_auth', JSON.stringify(authData));
+                    } else {
+                        sessionStorage.setItem('newshub_auth', JSON.stringify(authData));
+                    }
+                    
+                    AdminUI.showToast('Login successful!', 'success');
+                    
+                    // Redirect to dashboard
+                    setTimeout(() => {
+                        window.location.href = 'dashboard.html';
+                    }, 500);
+                } else {
+                    throw new Error('Invalid credentials or repository not found');
+                }
+            } catch (error) {
+                AdminUI.showToast(error.message, 'error');
+                btnText.style.display = 'block';
+                btnLoader.style.display = 'none';
+                submitBtn.disabled = false;
+            }
+        });
+        
+        // Check for saved credentials
+        document.addEventListener('DOMContentLoaded', () => {
+            const saved = localStorage.getItem('newshub_auth') || sessionStorage.getItem('newshub_auth');
+            if (saved) {
+                const auth = JSON.parse(saved);
+                document.getElementById('repoOwner').value = auth.owner || '';
+                document.getElementById('repoName').value = auth.repo || '';
+            }
+        });
+    </script>
+</body>
+</html>
