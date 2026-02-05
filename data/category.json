@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Technology",
+      "slug": "technology",
+      "description": "Latest tech news, innovations, and digital trends shaping our future",
+      "color": "#2563eb",
+      "icon": "💻",
+      "featured": true,
+      "postCount": 0
+    },
+    {
+      "id": 2,
+      "name": "Business",
+      "slug": "business",
+      "description": "Market updates, financial insights, and corporate news",
+      "color": "#10b981",
+      "icon": "💼",
+      "featured": true,
+      "postCount": 0
+    },
+    {
+      "id": 3,
+      "name": "Sports",
+      "slug": "sports",
+      "description": "Sports coverage, analysis, and highlights from around the world",
+      "color": "#f59e0b",
+      "icon": "⚽",
+      "featured": true,
+      "postCount": 0
+    },
+    {
+      "id": 4,
+      "name": "Entertainment",
+      "slug": "entertainment",
+      "description": "Movies, music, celebrity news, and pop culture updates",
+      "color": "#ef4444",
+      "icon": "🎬",
+      "featured": true,
+      "postCount": 0
+    },
+    {
+      "id": 5,
+      "name": "Health",
+      "slug": "health",
+      "description": "Health tips, medical breakthroughs, and wellness advice",
+      "color": "#8b5cf6",
+      "icon": "🏥",
+      "featured": false,
+      "postCount": 0
+    },
+    {
+      "id": 6,
+      "name": "Science",
+      "slug": "science",
+      "description": "Scientific discoveries, research, and space exploration",
+      "color": "#06b6d4",
+      "icon": "🔬",
+      "featured": false,
+      "postCount": 0
+    },
+    {
+      "id": 7,
+      "name": "Politics",
+      "slug": "politics",
+      "description": "Political news, policy updates, and government affairs",
+      "color": "#6366f1",
+      "icon": "🏛️",
+      "featured": false,
+      "postCount": 0
+    },
+    {
+      "id": 8,
+      "name": "Travel",
+      "slug": "travel",
+      "description": "Travel guides, destination reviews, and tourism tips",
+      "color": "#ec4899",
+      "icon": "✈️",
+      "featured": false,
+      "postCount": 0
+    }
+  ],
+  "lastUpdated": "2025-01-15T10:30:00Z"
+}
