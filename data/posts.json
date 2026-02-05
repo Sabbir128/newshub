@@ -42,23 +42,23 @@
     },
     {
       "id": 3,
-      "title": "Championship Finals: A Historic Showdown",
       "slug": "championship-finals",
+      "title": "Championship Finals: A Historic Showdown",
       "excerpt": "The final match delivers unforgettable moments as both teams battle for the title.",
       "content": "In what will be remembered as one of the greatest finals in sporting history, last night's championship match had everything a fan could ask for - drama, skill, and a nail-biting finish that went down to the wire.\n\n# The Build-Up\n\nBoth teams entered the final with impeccable records, having dominated their respective conferences throughout the season. The anticipation was palpable as fans from around the world tuned in.\n\n> This is what sports is all about - two great teams leaving everything on the field.\n\n# Key Moments\n\n## First Half\n\nThe opening period saw both teams testing each other, with several close calls but no breakthrough. The defensive displays were nothing short of spectacular.\n\n## The Turning Point\n\nThe second half brought a flurry of action, with the first goal coming in the 67th minute. What followed was a tactical chess match that kept viewers on the edge of their seats.\n\n## The Decisive Moment\n\nWith just minutes remaining, the winning goal was scored - a moment of individual brilliance that will be replayed for years to come.\n\n# Celebrations and Reflections\n\nThe winning team's celebrations were joyous but respectful, while the defeated finalists showed true sportsmanship in defeat. This match will be remembered as a classic.",
-      "category": "sports",
-      "author": "Emma Davis",
-      "authorImage": "https://i.pravatar.cc/150?u=emma",
-      "date": "2025-01-13",
       "image": "https://images.unsplash.com/photo-1461896836934- voices-5e77b8c5c7b5?w=800",
+      "category": "sports",
+      "author": "Sabbir Hossen",
+      "authorImage": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkPM0yTTyh9GSIil1eagqfYcMM5j3SBLWyRfG0Q5Y8wjbbUL3ZDFt52qVFItQ60zjzL1mdu2_BIKNEQHdqyMP0wpEYblQgVN1HOSOovKgPkwsWUsLtRiVhXrshsXQhVt7qjQovQ_i5TnEB3cYa7ZE8aO9JdBPVfGgRZkPjhcLKy2yMEWf-3i7UsLWRok_6/s240/FB_IMG_1695528307670.jpg",
+      "date": "2025-01-13",
       "featured": true,
-      "views": 15200,
       "tags": [
         "sports",
         "championship",
         "finals",
         "football"
-      ]
+      ],
+      "views": 15200
     },
     {
       "id": 4,
@@ -241,5 +241,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-05T14:53:22.213Z"
+  "lastUpdated": "2026-02-05T14:53:46.176Z"
 }
