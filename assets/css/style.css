@@ -1142,3 +1142,28 @@ ul {
     font-size: var(--font-size-sm);
     font-weight: 500;
 }
+
+/* View Counter Styles */
+.article-views {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-sm);
+    margin-left: 12px;
+    padding-left: 12px;
+    border-left: 1px solid var(--color-border);
+}
+
+.views-icon {
+    font-size: 14px;
+}
+
+#postViewsDisplay {
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.views-label {
+    opacity: 0.7;
+}
