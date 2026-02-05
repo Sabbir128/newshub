@@ -2,18 +2,23 @@
   "posts": [
     {
       "id": 1,
-      "title": "The Future of AI: What to Expect in 2025",
       "slug": "future-of-ai-2025",
+      "title": "The Future of AI: What to Expect in 2025",
       "excerpt": "Artificial intelligence continues to evolve at a rapid pace. Here's what experts predict for the coming year.",
       "content": "Artificial intelligence has become an integral part of our daily lives, from virtual assistants to recommendation systems. As we look ahead to 2025, experts predict several key developments that will shape the future of AI.\n\n# Advancements in Generative AI\n\nGenerative AI has already made waves with tools like ChatGPT and DALL-E. In 2025, we can expect these technologies to become even more sophisticated, with improved accuracy and reduced hallucinations.\n\n> The next generation of AI models will be able to understand context better and generate more nuanced responses.\n\n# AI in Healthcare\n\nHealthcare is one sector where AI is making significant strides. From drug discovery to personalized treatment plans, AI is revolutionizing how we approach medicine.\n\n## Key Areas of Impact:\n\n- Early disease detection through advanced imaging analysis\n- Personalized medicine based on genetic profiles\n- Automated administrative tasks to reduce doctor burnout\n- Predictive analytics for patient outcomes\n\n# Ethical Considerations\n\nAs AI becomes more powerful, ethical considerations become increasingly important. Issues like bias, privacy, and job displacement need to be addressed proactively.\n\nThe future of AI is bright, but it requires careful stewardship to ensure these powerful tools benefit humanity as a whole.",
-      "category": "technology",
-      "author": "Sarah Johnson",
-      "authorImage": "https://i.pravatar.cc/150?u=sarah",
-      "date": "2025-01-15",
       "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800",
+      "category": "technology",
+      "author": "Sabbir Hossen",
+      "authorImage": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkPM0yTTyh9GSIil1eagqfYcMM5j3SBLWyRfG0Q5Y8wjbbUL3ZDFt52qVFItQ60zjzL1mdu2_BIKNEQHdqyMP0wpEYblQgVN1HOSOovKgPkwsWUsLtRiVhXrshsXQhVt7qjQovQ_i5TnEB3cYa7ZE8aO9JdBPVfGgRZkPjhcLKy2yMEWf-3i7UsLWRok_6/s240/FB_IMG_1695528307670.jpg",
+      "date": "2025-01-15",
       "featured": true,
-      "views": 12500,
-      "tags": ["AI", "technology", "future", "innovation"]
+      "tags": [
+        "AI",
+        "technology",
+        "future",
+        "innovation"
+      ],
+      "views": 12500
     },
     {
       "id": 2,
@@ -28,7 +33,12 @@
       "image": "https://images.unsplash.com/photo-1611974765270-ca1258634369?w=800",
       "featured": true,
       "views": 8900,
-      "tags": ["markets", "stocks", "economy", "finance"]
+      "tags": [
+        "markets",
+        "stocks",
+        "economy",
+        "finance"
+      ]
     },
     {
       "id": 3,
@@ -43,7 +53,12 @@
       "image": "https://images.unsplash.com/photo-1461896836934- voices-5e77b8c5c7b5?w=800",
       "featured": true,
       "views": 15200,
-      "tags": ["sports", "championship", "finals", "football"]
+      "tags": [
+        "sports",
+        "championship",
+        "finals",
+        "football"
+      ]
     },
     {
       "id": 4,
@@ -58,7 +73,12 @@
       "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800",
       "featured": false,
       "views": 6700,
-      "tags": ["movies", "box office", "superhero", "entertainment"]
+      "tags": [
+        "movies",
+        "box office",
+        "superhero",
+        "entertainment"
+      ]
     },
     {
       "id": 5,
@@ -73,7 +93,12 @@
       "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800",
       "featured": false,
       "views": 9800,
-      "tags": ["battery", "EV", "technology", "innovation"]
+      "tags": [
+        "battery",
+        "EV",
+        "technology",
+        "innovation"
+      ]
     },
     {
       "id": 6,
@@ -88,7 +113,12 @@
       "image": "https://images.unsplash.com/photo-1553729459-efe14ef6055d?w=800",
       "featured": false,
       "views": 5400,
-      "tags": ["startup", "funding", "fintech", "venture capital"]
+      "tags": [
+        "startup",
+        "funding",
+        "fintech",
+        "venture capital"
+      ]
     },
     {
       "id": 7,
@@ -103,7 +133,12 @@
       "image": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=800",
       "featured": false,
       "views": 11200,
-      "tags": ["health", "diet", "nutrition", "longevity"]
+      "tags": [
+        "health",
+        "diet",
+        "nutrition",
+        "longevity"
+      ]
     },
     {
       "id": 8,
@@ -118,7 +153,12 @@
       "image": "https://images.unsplash.com/photo-1446776811953-b23d57bd21aa?w=800",
       "featured": false,
       "views": 14300,
-      "tags": ["space", "exoplanet", "astronomy", "science"]
+      "tags": [
+        "space",
+        "exoplanet",
+        "astronomy",
+        "science"
+      ]
     },
     {
       "id": 9,
@@ -133,7 +173,12 @@
       "image": "https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800",
       "featured": false,
       "views": 7600,
-      "tags": ["real estate", "remote work", "housing", "trends"]
+      "tags": [
+        "real estate",
+        "remote work",
+        "housing",
+        "trends"
+      ]
     },
     {
       "id": 10,
@@ -148,7 +193,12 @@
       "image": "https://images.unsplash.com/photo-1461896836934- voices-5e77b8c5c7b5?w=800",
       "featured": false,
       "views": 18900,
-      "tags": ["olympics", "sports", "records", "athletics"]
+      "tags": [
+        "olympics",
+        "sports",
+        "records",
+        "athletics"
+      ]
     },
     {
       "id": 11,
@@ -163,7 +213,12 @@
       "image": "https://images.unsplash.com/photo-1522869635100-9f4c5e86aa37?w=800",
       "featured": false,
       "views": 8200,
-      "tags": ["streaming", "entertainment", "media", "technology"]
+      "tags": [
+        "streaming",
+        "entertainment",
+        "media",
+        "technology"
+      ]
     },
     {
       "id": 12,
@@ -178,8 +233,13 @@
       "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=800",
       "featured": false,
       "views": 15600,
-      "tags": ["quantum computing", "technology", "science", "innovation"]
+      "tags": [
+        "quantum computing",
+        "technology",
+        "science",
+        "innovation"
+      ]
     }
   ],
-  "lastUpdated": "2025-01-15T10:30:00Z"
+  "lastUpdated": "2026-02-05T14:52:59.002Z"
 }
