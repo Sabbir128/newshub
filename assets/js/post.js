@@ -27,17 +27,32 @@ const PostPage = {
         this.updatePageTitle();
     },
     
-    renderArticle() {
-        const { post } = this;
+    async renderArticle() {
+    const { post } = this;
+    
+    // Article meta
+    const articleMeta = document.getElementById('articleMeta');
+    if (articleMeta) {
+        articleMeta.innerHTML = `
+            <span class="article-category">${this.capitalize(post.category)}</span>
+            <span class="article-date">${this.formatDate(post.date)}</span>
+            
+            <!-- 👁️ View Counter -->
+            <span class="article-views">
+                <span class="views-icon">👁️</span>
+                <span id="postViewsDisplay" 
+                      data-slug="${post.slug}" 
+                      data-manual-views="${post.views || 0}">0</span>
+                <span class="views-label">views</span>
+            </span>
+        `;
         
-        // Article meta
-        const articleMeta = document.getElementById('articleMeta');
-        if (articleMeta) {
-            articleMeta.innerHTML = `
-                <span class="article-category">${this.capitalize(post.category)}</span>
-                <span class="article-date">${this.formatDate(post.date)}</span>
-            `;
+        // Initialize view counter
+        if (typeof ViewCounter !== 'undefined') {
+            ViewCounter.init(post.slug, post.views || 0);
         }
+    }
+
         
         // Article title
         const articleTitle = document.getElementById('articleTitle');
