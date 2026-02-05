@@ -62,23 +62,23 @@
     },
     {
       "id": 4,
-      "title": "New Blockbuster Breaks Box Office Records",
       "slug": "blockbuster-records",
+      "title": "New Blockbuster Breaks Box Office Records",
       "excerpt": "The latest superhero film shatters expectations and sets new industry standards.",
       "content": "Hollywood is celebrating as the newest addition to the superhero franchise has shattered box office records in its opening weekend, becoming the highest-grossing debut of all time.\n\n# Record-Breaking Performance\n\nThe film pulled in an astonishing $380 million domestically and $720 million internationally, for a worldwide total of $1.1 billion in its first weekend alone.\n\n> These numbers are unprecedented. The film has exceeded even our most optimistic projections.\n\n# Critical Reception\n\nBeyond the financial success, the film has garnered critical acclaim for its storytelling, visual effects, and performances. It currently holds a 94% rating on Rotten Tomatoes.\n\n## What Critics Are Saying:\n\n- A masterpiece of modern cinema\n- Sets a new standard for the genre\n- Emotionally resonant and visually stunning\n- A satisfying conclusion to the saga\n\n# Impact on the Industry\n\nThe success of this film is expected to influence studio strategies for years to come, with more emphasis on quality storytelling alongside spectacle.\n\n# What's Next\n\nWith this level of success, sequels and spin-offs are already in development, promising to expand this beloved universe even further.",
-      "category": "entertainment",
-      "author": "Alex Rivera",
-      "authorImage": "https://i.pravatar.cc/150?u=alex",
-      "date": "2025-01-12",
       "image": "https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?w=800",
+      "category": "entertainment",
+      "author": "Sabbir Hossen",
+      "authorImage": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkPM0yTTyh9GSIil1eagqfYcMM5j3SBLWyRfG0Q5Y8wjbbUL3ZDFt52qVFItQ60zjzL1mdu2_BIKNEQHdqyMP0wpEYblQgVN1HOSOovKgPkwsWUsLtRiVhXrshsXQhVt7qjQovQ_i5TnEB3cYa7ZE8aO9JdBPVfGgRZkPjhcLKy2yMEWf-3i7UsLWRok_6/s240/FB_IMG_1695528307670.jpg",
+      "date": "2025-01-12",
       "featured": false,
-      "views": 6700,
       "tags": [
         "movies",
         "box office",
         "superhero",
         "entertainment"
-      ]
+      ],
+      "views": 6700
     },
     {
       "id": 5,
@@ -241,5 +241,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-05T14:53:46.176Z"
+  "lastUpdated": "2026-02-05T14:54:16.327Z"
 }
