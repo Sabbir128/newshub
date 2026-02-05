@@ -70,7 +70,15 @@
         <section class="article-header">
             <div class="container">
                 <div class="article-meta" id="articleMeta">
-                    <!-- Article metadata will be loaded here -->
+                    <span class="article-category" id="articleCategory">Category</span>
+                    <span class="article-date" id="articleDate">Date</span>
+                    
+                    <!-- 👁️ View Counter -->
+                    <span class="article-views">
+                        <span class="views-icon">👁️</span>
+                        <span id="postViewsDisplay" data-slug="" data-manual-views="0">0</span>
+                        <span class="views-label">views</span>
+                    </span>
                 </div>
                 <h1 class="article-title" id="articleTitle">Loading...</h1>
                 <div class="article-author" id="articleAuthor">
@@ -187,5 +195,6 @@
     <script src="assets/js/fetch.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/post.js"></script>
+    <script src="assets/js/views.js"></script>
 </body>
 </html>
