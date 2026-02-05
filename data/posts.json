@@ -82,23 +82,23 @@
     },
     {
       "id": 5,
-      "title": "Revolutionary Battery Technology Unveiled",
       "slug": "battery-technology",
+      "title": "Revolutionary Battery Technology Unveiled",
       "excerpt": "Scientists announce breakthrough in battery efficiency that could transform electric vehicles.",
       "content": "A team of researchers has developed a new battery technology that promises to double the range of electric vehicles while significantly reducing charging times.\n\n# The Breakthrough\n\nThe new solid-state battery design uses a novel electrolyte material that allows for faster ion transfer while maintaining stability at high temperatures.\n\n> This could be the tipping point that makes electric vehicles truly competitive with traditional combustion engines.\n\n# Key Advantages\n\n## Increased Range\n\nLaboratory tests show energy density improvements of up to 100% compared to current lithium-ion batteries.\n\n## Faster Charging\n\nThe new design can achieve 80% charge in just 10 minutes, addressing one of the biggest concerns for potential EV buyers.\n\n## Enhanced Safety\n\nSolid-state batteries are inherently safer, with significantly reduced fire risk compared to liquid electrolyte designs.\n\n# Commercial Viability\n\nThe research team is already working with major automotive manufacturers to bring this technology to market within the next three years.\n\n# Environmental Impact\n\nBeyond the direct benefits to EVs, the new battery technology uses more abundant materials, reducing reliance on scarce resources like cobalt.",
-      "category": "technology",
-      "author": "Dr. Lisa Park",
-      "authorImage": "https://i.pravatar.cc/150?u=lisa",
-      "date": "2025-01-11",
       "image": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?w=800",
-      "featured": false,
-      "views": 9800,
+      "category": "technology",
+      "author": "Sabbir Hossen",
+      "authorImage": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkPM0yTTyh9GSIil1eagqfYcMM5j3SBLWyRfG0Q5Y8wjbbUL3ZDFt52qVFItQ60zjzL1mdu2_BIKNEQHdqyMP0wpEYblQgVN1HOSOovKgPkwsWUsLtRiVhXrshsXQhVt7qjQovQ_i5TnEB3cYa7ZE8aO9JdBPVfGgRZkPjhcLKy2yMEWf-3i7UsLWRok_6/s240/FB_IMG_1695528307670.jpg",
+      "date": "2023-12-14",
+      "featured": true,
       "tags": [
         "battery",
         "EV",
         "technology",
         "innovation"
-      ]
+      ],
+      "views": 9800
     },
     {
       "id": 6,
@@ -241,5 +241,5 @@
       ]
     }
   ],
-  "lastUpdated": "2026-02-05T14:54:16.327Z"
+  "lastUpdated": "2026-02-05T14:55:06.128Z"
 }
