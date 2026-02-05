@@ -27,32 +27,31 @@ const PostPage = {
         this.updatePageTitle();
     },
     
-    async renderArticle() {
-    const { post } = this;
-    
-    // Article meta
-    const articleMeta = document.getElementById('articleMeta');
-    if (articleMeta) {
-        articleMeta.innerHTML = `
-            <span class="article-category">${this.capitalize(post.category)}</span>
-            <span class="article-date">${this.formatDate(post.date)}</span>
-            
-            <!-- 👁️ View Counter -->
-            <span class="article-views">
-                <span class="views-icon">👁️</span>
-                <span id="postViewsDisplay" 
-                      data-slug="${post.slug}" 
-                      data-manual-views="${post.views || 0}">0</span>
-                <span class="views-label">views</span>
-            </span>
-        `;
+    renderArticle() {
+        const { post } = this;
         
-        // Initialize view counter
-        if (typeof ViewCounter !== 'undefined') {
-            ViewCounter.init(post.slug, post.views || 0);
+        // Article meta
+        const articleMeta = document.getElementById('articleMeta');
+        if (articleMeta) {
+            articleMeta.innerHTML = `
+                <span class="article-category">${this.capitalize(post.category)}</span>
+                <span class="article-date">${this.formatDate(post.date)}</span>
+                
+                <!-- 👁️ View Counter -->
+                <span class="article-views">
+                    <span class="views-icon">👁️</span>
+                    <span id="postViewsDisplay" 
+                          data-slug="${post.slug}" 
+                          data-manual-views="${post.views || 0}">0</span>
+                    <span class="views-label">views</span>
+                </span>
+            `;
+            
+            // Initialize view counter
+            if (typeof ViewCounter !== 'undefined') {
+                ViewCounter.init(post.slug, post.views || 0);
+            }
         }
-    }
-
         
         // Article title
         const articleTitle = document.getElementById('articleTitle');
@@ -87,33 +86,17 @@ const PostPage = {
         }
     },
     
-    // post.js এর renderArticle ফাংশনে যোগ করুন:
-
-async function renderArticle() {
-    const { post } = this;
-    
-    // ... existing code ...
-    
-    // Set view counter data
-    const viewsDisplay = document.getElementById('postViewsDisplay');
-    if (viewsDisplay) {
-        viewsDisplay.dataset.slug = post.slug;
-        viewsDisplay.dataset.manualViews = post.views || 0;
+    async renderRelatedPosts() {
+        if (!this.post) return;
         
-        // Load views.js if not already loaded
-        if (!window.ViewCounter) {
-            const script = document.createElement('script');
-            script.src = 'assets/js/views.js';
-            script.onload = () => {
-                ViewCounter.init(post.slug, post.views || 0);
-            };
-            document.head.appendChild(script);
-        }
-    }
-    
-    // ... rest of the code ...
-}
-
+        const relatedPostsContainer = document.getElementById('relatedPosts');
+        if (!relatedPostsContainer) return;
+        
+        const relatedPosts = await DataService.getRelatedPosts(
+            this.post.slug, 
+            this.post.category, 
+            4
+        );
         
         if (relatedPosts.length === 0) {
             relatedPostsContainer.style.display = 'none';
